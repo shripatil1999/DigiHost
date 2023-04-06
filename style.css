@@ -1,0 +1,140 @@
+
+:root {
+  /* declaring variables */
+  --bgcolor: #f9f3f4;
+  --gray: #524d4d;
+  --txt: "Anuphan", sans-serif;
+  font-size:16px;
+}
+
+header {
+  background-color: var(--bgcolor);
+  text-align: center;
+  padding: 5%;
+  border-bottom: 1px solid var(--gray);
+}
+
+header h1, main h1 {
+  margin-bottom: 3%;
+  font-size: 2.5rem;
+  font-family: var(--txt);
+}
+
+hr {
+  margin: 1.5rem auto !important;
+}
+
+.header-img {
+  display: flex;
+  justify-content: center;
+overflow-x: auto;   /* to make the images horizontal scroll  */
+  scroll-snap-type: x mandatory;
+  column-gap: 3%;
+  margin-bottom: 20px;
+}
+
+.header-img .img {
+  width: 100%;
+  max-width: 300px; /* image will not exceede the mentioned size */
+  height: 200px;
+  scroll-snap-align: start; 
+  border: var(--gray) 1.3px solid;
+}
+h3,p{
+  font-family:var(--txt);
+}
+
+.shop-btn {
+  background-color: var(--gray);
+  color: var(--bgcolor);
+  border-radius: 2px;
+  border: none;
+  padding: 7px 45px;
+}
+
+.shop-btn:hover{
+  background: var(--bgcolor);
+  color: var(--gray);
+  border: var(--gray) 1px solid;
+}
+.featured-products {
+  padding: 5% 5% 0 5%;
+  text-align: center;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+}
+
+.products img{
+  width: 100%;
+  height: auto;
+  max-width: 540px;
+  border: var(--gray) 1.4px solid;
+}
+.newsletter{
+padding: 3% 0;
+}
+.subscribe{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5%;
+}
+.subscribe-btn{
+  padding: 0.5% 10%;
+  border: none;
+  background: var(--gray);
+  color: var(--bgcolor);
+}
+/* hover button */
+.subscribe-btn:hover{
+  background: var(--bgcolor);
+  color: var(--gray);
+  border: var(--gray) 1px solid;
+}
+
+.input-text{
+  width: 50%;
+}
+.newsletter{
+  background-color: #e0cdd0cc;
+  border-top: 1px solid #b5afaf;
+  border-bottom: 1px solid #b5afaf;
+}
+
+.product-list{
+padding: 5%;
+}
+.product-list .main-img{
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  border: var(--gray) 1.4px solid;
+}
+ .sub-img{
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  border: var(--gray) 1.4px solid;
+ }
+
+/* to make web page more responsive */
+@media only screen and (max-width: 1111px) {
+   header{
+    padding: 5% 0% 5% 5%;
+  }
+
+  .header-img {
+    justify-content: start;
+/* to give gap between two images */
+    column-gap: 5%; 
+  }
+  .header-img .img:last-child {
+    margin-right: 10px;
+  }
+  .products {
+    justify-content: center;
+  }
+}
