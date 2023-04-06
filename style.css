@@ -120,7 +120,7 @@ padding: 5%;
   border: var(--gray) 1.4px solid;
  }
 
-/* to make web page more responsive */
+/*using media queries to make web page more responsive */
 @media only screen and (max-width: 1111px) {
    header{
     padding: 5% 0% 5% 5%;
